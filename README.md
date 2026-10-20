@@ -1,2 +1,89 @@
-# LifeTracker-Releases
-LifeTracker
+# LifeTracker
+
+LifeTracker is an Android app for recording workouts, food intake and bodyweight, and comparing daily records with your plans.
+
+## Quick Summary
+
+- Workout sets, cardio, workout timing and one shared rest countdown.
+- Food intake, calories/macros and independent Workout/Diet Programs.
+- Calendar, History, exercise progress and daily summary images.
+- XLSX Program files, reusable presets, JSON backups and readable data exports.
+- Local SQLite storage, English/Korean and Metric/Imperial display.
+
+## Download
+
+**Latest version: v1.0.1 (build 20)**
+
+[**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
+
+Current APK: [LifeTracker-v1.0.1-build20.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.1/LifeTracker-v1.0.1-build20.apk)
+
+### Install or update
+
+1. Download the APK and open it on Android.
+2. If prompted, allow installation from the browser or file manager you used.
+3. Install over your existing LifeTracker version to update.
+
+**Do not uninstall LifeTracker if you want to preserve its local data.** Data is stored on your device; uninstalling may remove it. Export a backup before making significant changes or moving devices.
+
+## Features
+
+### Workout Tracking and Timer
+
+Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
+
+Start, pause, resume and finish the tracked workout for a date. Elapsed time uses timestamps and excludes pauses. Finish is prominent at both top and bottom. A confirmed **Reset Today's Workout** clears that day's actual workout state while retaining the planned workout, Diet and other dates.
+
+### Workout Programs
+
+Create, edit, duplicate, archive, delete and select Workout Programs independently from Diet Programs. Daily, Weekly and N-week schedules support recurrence-specific editing and cycle alignment. Weekly lists Monday–Sunday; N-week schedules use configured weeks and end behavior. Program edits do not rewrite historical actual logs. Navigation retains the immediate parent when going Back.
+
+### Diet Tracking
+
+Track consumed amounts and actual calories, protein, carbohydrates and fat. Use foods from the library or manual entries; direct macro logging is also available at meal/day level. Planned and actual nutrition remain separate. Removing a planned food from Today affects that date rather than deleting it from its Program.
+
+### Diet Programs
+
+Plan meals and food portions with Daily, Weekly or N-week recurrence and optional nutrition targets. Each planned food occurrence can be enabled/disabled without losing its values, edited while disabled, re-enabled or permanently deleted separately. Disabled foods do not contribute to planned nutrition. Duplicate occurrences are independently controlled; prior consumed food logs remain intact.
+
+### Exercise and Food Libraries
+
+Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
+
+### Rest Timer
+
+One global ON/OFF setting applies to all exercises, with independent saved durations per exercise. Eligible completed resistance sets can start the single active countdown; a later trigger replaces it. Turning the global switch OFF cancels the countdown rather than announcing completion. Android native scheduling supports background completion notification/vibration, subject to permissions, notification settings and device policies.
+
+### Calories
+
+Workout burn combines completed resistance work, recorded cardio and Other Activity once. Resistance uses a bounded completed-set work/time estimate and bodyweight/intensity inputs; idle session time alone contributes zero resistance calories. Other Activity accepts optional explicit kcal that overrides its estimate. Missing required inputs can leave estimates unavailable. These are estimates, not measured physiological expenditure.
+
+### Calendar, History and Exercise Progress
+
+Review dated workout/Diet records, completion and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
+
+### Daily Summary
+
+Preview daily Workout/Diet summaries and save report images to the gallery. Summaries use actual recorded work/intake while retaining planned comparisons. Gallery saving requests the relevant Android permission.
+
+### Import / Export and Templates
+
+Import/export Workout and Diet XLSX files with Daily/Weekly/N-week layouts. Diet files preserve optional Enabled state; older files without that column default foods to enabled. Workout import offers file checking, exercise mapping and guarded undo. Save blank templates and exercise-name lists. Save/load reusable Workout/Diet presets. Export JSON backups or readable data files; backup restore validates compatibility and preserves the existing safety-backup flow.
+
+### Units, Appearance and Language
+
+Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English, Korean and a system-language preference are available. **Dark appearance is the supported theme in this build.**
+
+### Data, Offline Storage and Android Integration
+
+Core tracking works locally/offline using SQLite. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, gallery report saving and file sharing. This distribution repository contains documentation and APK assets, not the private application source.
+
+## Version Information
+
+- Current Version: **v1.0.1**
+- Android Build: **20**
+- Package: `com.lee2300.LifeTracker`
+
+## Known Limitations
+
+The current data model tracks one workout session per date; multiple independently timed sessions on one date are not advertised. There is no cloud-sync claim. Native notifications/vibration depend on Android permissions/settings. Release automation validates builds and signatures, but does not establish physical-device touch, layout, predictive Back, vibration or installed-data-retention behavior.
