@@ -4,21 +4,21 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Quick Summary
 
-- Workout sets, cardio, workout timing and one shared rest countdown.
+- Independently timed workout sessions, resistance sets, cardio and one shared rest countdown.
 - Food intake, calories/macros and independent Workout/Diet Programs.
 - Calendar, History, exercise progress and daily summary images.
-- XLSX Program files, reusable presets, JSON backups and readable data exports.
+- Session-aware XLSX Programs, reusable presets, duplicate-safe actual History XLSX merge and full JSON backups.
 - Local SQLite storage, English/Korean and Metric/Imperial display.
 
 ## Download
 
-**Latest version: v1.0.4 (build 23)**
+**Latest version: v1.0.5 (build 24)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.4-build23.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.4/LifeTracker-v1.0.4-build23.apk)
+Current APK: [LifeTracker-v1.0.5-build24.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.5/LifeTracker-v1.0.5-build24.apk)
 
-Play Store bundle: [LifeTracker-v1.0.4-build23.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.4/LifeTracker-v1.0.4-build23.aab)
+Play Store bundle: [LifeTracker-v1.0.5-build24.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.5/LifeTracker-v1.0.5-build24.aab)
 
 ### Install or update
 
@@ -54,7 +54,7 @@ Track consumed amounts and actual calories, protein, carbohydrates and fat. Use 
 
 Plan meals and food portions with Daily, Weekly or N-week recurrence and optional nutrition targets. Each planned food occurrence can be enabled/disabled without losing its values, edited while disabled, re-enabled or permanently deleted separately. Disabled foods do not contribute to planned nutrition. Duplicate occurrences are independently controlled; prior consumed food logs remain intact.
 
-Programs, Libraries and Data Tools each have their own Menu destination. Program details include an explicit Active/Inactive control, start date, recurrence, end behavior and confirmed deletion. Fresh installations have one Example Workout Program and one Example Diet Program. Shared numeric/text inputs reveal the focused field above the keyboard.
+Programs, Libraries and Data Tools each have their own Menu destination. Program lists support persisted grip-handle ordering. Details include a tappable name, explicit Active/Inactive control, start date, recurrence, end behavior and confirmed deletion. Week/day screens focus on their own content. A day can contain multiple planned sessions; actual sessions have independent start/pause/finish timing. Fresh installations have one Example Workout Program and one Example Diet Program. Shared numeric/text inputs reveal the focused field above the keyboard.
 
 ### Exercise and Food Libraries
 
@@ -70,7 +70,7 @@ Workout burn combines completed resistance work, recorded cardio and Other Activ
 
 ### Calendar, History and Exercise Progress
 
-Calendar shows separate Workout and Diet states for each date. Optional goal completion uses stored planned-food totals and scheduled work, configurable Diet tolerance and Green/Orange thresholds. Choose percentages or status colors. Review dated records and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
+Calendar shows separate Workout and Diet states for each date. Optional goal completion uses stored planned-food totals and scheduled work, configurable low/high Diet bounds (default 50 / 90 / 110 / 150%) and a separate Workout Green boundary. Choose percentages or status colors. Review dated records and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
 
 ### Daily Summary
 
@@ -78,11 +78,13 @@ Preview daily Workout/Diet summaries, save generated PNGs to a system-selected f
 
 ### Import / Export and Templates
 
-Import/export Workout and Diet XLSX files with Daily/Weekly/N-week layouts. Diet files preserve optional Enabled state; older files without that column default foods to enabled. Workout import offers file checking, exercise mapping and guarded undo. Save blank templates and exercise-name lists. Save/load reusable Workout/Diet presets. Export JSON backups or readable data files; backup restore validates compatibility and preserves the existing safety-backup flow.
+Import/export Workout and Diet XLSX files with Daily/Weekly/N-week layouts. Workout files retain the original five columns and add optional Session, SessionName, ExerciseKey, Notes and RPE fields; old files import into Session 1. Diet files preserve optional Enabled state; older files without it default foods to enabled. Workout import offers file checking, exercise mapping and guarded undo. Save blank templates, exercise-name lists and reusable Workout/Diet presets.
+
+Data Tools exports/imports actual Workout, Diet and Bodyweight History separately or in one versioned XLSX workbook. Imports validate before writing, merge without deleting records, skip identical identities and preserve conflicting existing records. Normalized child sheets preserve multiple same-day sessions and historical food snapshots; canonical units remain metric. Full JSON backup/restore remains the safest complete restoration format.
 
 ### Units, Appearance and Language
 
-Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English, Korean and a system-language preference are available. **Dark appearance is the supported theme in this build.**
+Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English and Korean have complete dictionary coverage; sparse additional locales use consistent English UI fallback with locale-aware dates/numbers. A system-language preference is available. **Dark appearance is the supported theme in this build.**
 
 ### Data, Offline Storage and Android Integration
 
@@ -90,10 +92,10 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.4**
-- Android Build: **23**
+- Current Version: **v1.0.5**
+- Android Build: **24**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
 
-The current data model tracks one workout session per date; multiple independently timed sessions on one date are not advertised. There is no cloud-sync claim. Native notifications/vibration depend on Android permissions/settings. Release automation validates builds and signatures, but does not establish physical-device touch, layout, predictive Back, vibration or installed-data-retention behavior.
+Android and browser records remain separate without cloud sync. History XLSX is a conservative actual-record merge, not a replacement for full JSON backup/restore. Large imports use resumable transaction chunks; conflicting existing rows are retained. Native notifications/vibration depend on Android permissions/settings. Release automation validates builds and signatures, but does not establish physical-device touch, layout, vibration or installed-data-retention behavior.
