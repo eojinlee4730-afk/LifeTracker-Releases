@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.7 (build 26)**
+**Latest version: v1.0.8 (build 27)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.7-build26.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.7/LifeTracker-v1.0.7-build26.apk)
+Current APK: [LifeTracker-v1.0.8-build27.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.8/LifeTracker-v1.0.8-build27.apk)
 
-Play Store bundle: [LifeTracker-v1.0.7-build26.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.7/LifeTracker-v1.0.7-build26.aab)
+Play Store bundle: [LifeTracker-v1.0.8-build27.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.8/LifeTracker-v1.0.8-build27.aab)
 
 ### Install or update
 
@@ -60,11 +60,11 @@ Programs & Plans, Libraries and Data Management each have their own Menu destina
 
 ### Exercise and Food Libraries
 
-Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
+Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Custom Exercise has six draft-based multi-select metadata sheets and a nonnegative kcal/hour metadata field; existing aliases remain searchable without an alias-editing field. The rate does not replace the current completed-work/MET calorie engine. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
 
 ### Rest Timer
 
-One global ON/OFF setting applies to all exercises, with independent saved durations per exercise. Eligible completed resistance sets can start the single active countdown; a later trigger replaces it. Turning the global switch OFF cancels the countdown rather than announcing completion. Android native scheduling supports background completion notification/vibration, subject to permissions, notification settings and device policies.
+One global ON/OFF setting applies to all exercises, with independent saved durations per exercise. Eligible completed resistance sets can start the single active countdown; a later trigger replaces it. Turning the global switch OFF cancels the countdown rather than announcing completion. Android native scheduling supports background completion notification/vibration, subject to permissions, notification settings and device policies. The compact card has a timestamp-derived countdown, exercise name and thin progress bar. +30 extends, Skip cancels, and × only hides the countdown. Completion stays visible briefly; transitions respect reduced motion.
 
 ### Calories
 
@@ -80,7 +80,7 @@ Preview daily Workout/Diet summaries, save generated PNGs to a system-selected f
 
 ### Import / Export and Templates
 
-Menu → Data Management separates Program Import / Export, Templates, actual History files and Backup & Restore. Programs & Plans also links to that shared area. Workout File and Diet File have parallel Import File / Save Template actions, and each expandable Program row exports only when requested. Program detail has the same export action at the bottom.
+Menu → Data Management separates Program Import / Export, Templates, actual History files and Backup & Restore. Programs & Plans also links to that shared area and has bottom Save Template / Import Data buttons. Templates opens a two-choice modal in place; both entry points use the same generator. Import shortcuts use the guarded Program preview, separate from History. Workout File and Diet File have parallel Import File / Save Template actions, and each expandable Program row exports only when requested. Program detail has the same export action at the bottom. Start Date appears directly above Recurrence in a compact metadata group. Supported exercise/food/activity deletes and planned-content edits update immediately while persistence stays serialized; failures reconcile without raw database text.
 
 New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. EXAMPLE rows are excluded; a sample-only workbook creates no Program. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Shared Workout/Diet presets remain available.
 
@@ -98,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.7**
-- Android Build: **26**
+- Current Version: **v1.0.8**
+- Android Build: **27**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
