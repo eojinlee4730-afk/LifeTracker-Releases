@@ -1,6 +1,6 @@
 # LifeTracker
 
-LifeTracker is an Android app for recording workouts, food intake and bodyweight, and comparing daily records with your plans.
+LifeTracker is an Android app and a free local-only Web/PWA for recording workouts, food intake and bodyweight, and comparing daily records with your plans.
 
 ## Quick Summary
 
@@ -12,13 +12,13 @@ LifeTracker is an Android app for recording workouts, food intake and bodyweight
 
 ## Download
 
-**Latest version: v1.0.3 (build 22)**
+**Latest version: v1.0.4 (build 23)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.3-build22.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.3/LifeTracker-v1.0.3-build22.apk)
+Current APK: [LifeTracker-v1.0.4-build23.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.4/LifeTracker-v1.0.4-build23.apk)
 
-Play Store bundle: [LifeTracker-v1.0.3-build22.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.3/LifeTracker-v1.0.3-build22.aab)
+Play Store bundle: [LifeTracker-v1.0.4-build23.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.4/LifeTracker-v1.0.4-build23.aab)
 
 ### Install or update
 
@@ -27,6 +27,12 @@ Play Store bundle: [LifeTracker-v1.0.3-build22.aab](https://github.com/eojinlee4
 3. Install over your existing LifeTracker version to update.
 
 **Do not uninstall LifeTracker if you want to preserve its local data.** Data is stored on your device; uninstalling may remove it. Export a backup before making significant changes or moving devices.
+
+## Web / PWA
+
+[**Open LifeTracker Web**](https://eojinlee4730-afk.github.io/LifeTracker-Releases/app/) — installable in supported browsers, with offline tracking after the first successful online load. Hosting cost: **$0/month**.
+
+Web records stay in browser-local IndexedDB. There is no account, automatic Android/Web sync or server backup. Transfer data manually with JSON backups in Menu → Data Tools. Clearing site data or private browsing can remove records; export backups regularly. Browser rest alerts are less capable than Android native alarms and depend on browser permissions/background policies.
 
 ## Features
 
@@ -80,12 +86,12 @@ Choose Metric or Imperial display without rewriting canonical measurements. Impe
 
 ### Data, Offline Storage and Android Integration
 
-Core tracking works locally/offline using SQLite. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, generated PNG file saving and file sharing. This distribution repository contains documentation and signed release artifacts, not the private application source.
+Core tracking works locally/offline using SQLite on Android and SQLite/WASM stored in IndexedDB on Web. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, generated PNG file saving and file sharing. This distribution repository contains documentation and signed release artifacts, not the private application source.
 
 ## Version Information
 
-- Current Version: **v1.0.3**
-- Android Build: **22**
+- Current Version: **v1.0.4**
+- Android Build: **23**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
