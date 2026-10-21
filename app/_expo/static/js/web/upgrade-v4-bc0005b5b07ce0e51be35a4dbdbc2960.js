@@ -1,0 +1,1 @@
+__d(function(g,r,i,a,m,e,d){"use strict";Object.defineProperty(e,'__esModule',{value:!0}),e.upgradeV4=async function(n){await n.withExclusiveTransactionAsync(async n=>{await n.execAsync("\n ALTER TABLE exercise_log ADD COLUMN pre_skip_status TEXT;\n PRAGMA user_version=4;\n")})}},1492,[]);
