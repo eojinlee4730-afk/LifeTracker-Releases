@@ -12,11 +12,13 @@ LifeTracker is an Android app for recording workouts, food intake and bodyweight
 
 ## Download
 
-**Latest version: v1.0.1 (build 20)**
+**Latest version: v1.0.2 (build 21)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.1-build20.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.1/LifeTracker-v1.0.1-build20.apk)
+Current APK: [LifeTracker-v1.0.2-build21.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.2/LifeTracker-v1.0.2-build21.apk)
+
+Play Store bundle: [LifeTracker-v1.0.2-build21.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.2/LifeTracker-v1.0.2-build21.aab)
 
 ### Install or update
 
@@ -64,7 +66,7 @@ Review dated workout/Diet records, completion and bodyweight. History and Summar
 
 ### Daily Summary
 
-Preview daily Workout/Diet summaries and save report images to the gallery. Summaries use actual recorded work/intake while retaining planned comparisons. Gallery saving requests the relevant Android permission.
+Preview daily Workout/Diet summaries, save generated PNGs to a system-selected folder, or share them with another app. Summaries use actual recorded work/intake while retaining planned comparisons. LifeTracker does not browse or read your photo library and does not request broad photo/media access.
 
 ### Import / Export and Templates
 
@@ -76,12 +78,12 @@ Choose Metric or Imperial display without rewriting canonical measurements. Impe
 
 ### Data, Offline Storage and Android Integration
 
-Core tracking works locally/offline using SQLite. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, gallery report saving and file sharing. This distribution repository contains documentation and APK assets, not the private application source.
+Core tracking works locally/offline using SQLite. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, generated PNG file saving and file sharing. This distribution repository contains documentation and signed release artifacts, not the private application source.
 
 ## Version Information
 
-- Current Version: **v1.0.1**
-- Android Build: **20**
+- Current Version: **v1.0.2**
+- Android Build: **21**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
