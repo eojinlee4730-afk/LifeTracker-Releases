@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.5 (build 24)**
+**Latest version: v1.0.6 (build 25)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.5-build24.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.5/LifeTracker-v1.0.5-build24.apk)
+Current APK: [LifeTracker-v1.0.6-build25.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.6/LifeTracker-v1.0.6-build25.apk)
 
-Play Store bundle: [LifeTracker-v1.0.5-build24.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.5/LifeTracker-v1.0.5-build24.aab)
+Play Store bundle: [LifeTracker-v1.0.6-build25.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.6/LifeTracker-v1.0.6-build25.aab)
 
 ### Install or update
 
@@ -32,7 +32,9 @@ Play Store bundle: [LifeTracker-v1.0.5-build24.aab](https://github.com/eojinlee4
 
 [**Open LifeTracker Web**](https://eojinlee4730-afk.github.io/LifeTracker-Releases/app/) — installable in supported browsers, with offline tracking after the first successful online load. Hosting cost: **$0/month**.
 
-Web records stay in browser-local IndexedDB. There is no account, automatic Android/Web sync or server backup. Transfer data manually with JSON backups in Menu → Data Tools. Clearing site data or private browsing can remove records; export backups regularly. Browser rest alerts are less capable than Android native alarms and depend on browser permissions/background policies.
+Web records stay in browser-local IndexedDB. There is no account, automatic Android/Web sync or server backup. Transfer data manually with JSON backups in Menu → Data Management → Backup & Restore. Clearing site data or private browsing can remove records; export backups regularly. Browser rest alerts are less capable than Android native alarms and depend on browser permissions/background policies.
+
+- Live English/Korean language changes now refresh navigation labels and screen content without resetting navigation; the selected language persists after its queued save completes.
 
 ## Features
 
@@ -54,7 +56,7 @@ Track consumed amounts and actual calories, protein, carbohydrates and fat. Use 
 
 Plan meals and food portions with Daily, Weekly or N-week recurrence and optional nutrition targets. Each planned food occurrence can be enabled/disabled without losing its values, edited while disabled, re-enabled or permanently deleted separately. Disabled foods do not contribute to planned nutrition. Duplicate occurrences are independently controlled; prior consumed food logs remain intact.
 
-Programs, Libraries and Data Tools each have their own Menu destination. Program lists support persisted grip-handle ordering. Details include a tappable name, explicit Active/Inactive control, start date, recurrence, end behavior and confirmed deletion. Week/day screens focus on their own content. A day can contain multiple planned sessions; actual sessions have independent start/pause/finish timing. Fresh installations have one Example Workout Program and one Example Diet Program. Shared numeric/text inputs reveal the focused field above the keyboard.
+Programs & Plans, Libraries and Data Management each have their own Menu destination. Program lists support persisted grip-handle ordering. Details include a tappable name with a pencil, explicit Active/Inactive control, start date, recurrence, end behavior and confirmed deletion. Week/day screens focus on their own content. A day can contain multiple planned sessions; actual sessions have independent start/pause/finish timing. Fresh installations have one Example Workout Program and one Example Diet Program. Shared numeric/text inputs reveal the focused field above the keyboard.
 
 ### Exercise and Food Libraries
 
@@ -78,9 +80,13 @@ Preview daily Workout/Diet summaries, save generated PNGs to a system-selected f
 
 ### Import / Export and Templates
 
-Import/export Workout and Diet XLSX files with Daily/Weekly/N-week layouts. Workout files retain the original five columns and add optional Session, SessionName, ExerciseKey, Notes and RPE fields; old files import into Session 1. Diet files preserve optional Enabled state; older files without it default foods to enabled. Workout import offers file checking, exercise mapping and guarded undo. Save blank templates, exercise-name lists and reusable Workout/Diet presets.
+Menu → Data Management separates Program Import / Export, Templates, actual History files and Backup & Restore. Programs & Plans also links to that shared area. Workout File and Diet File have parallel Import File / Save Template actions, and each expandable Program row exports only when requested. Program detail has the same export action at the bottom.
 
-Data Tools exports/imports actual Workout, Diet and Bodyweight History separately or in one versioned XLSX workbook. Imports validate before writing, merge without deleting records, skip identical identities and preserve conflicting existing records. Normalized child sheets preserve multiple same-day sessions and historical food snapshots; canonical units remain metric. Full JSON backup/restore remains the safest complete restoration format.
+New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. EXAMPLE rows are excluded; a sample-only workbook creates no Program. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Shared Workout/Diet presets remain available.
+
+Started/performed workout occurrences keep their materialized exercise, set and session snapshots when the active Program is edited or switched, including on today's date. Untouched future occurrences can follow updated plans. Workout/Diet Programs remain independent.
+
+Data Management exports/imports actual Workout, Diet and Bodyweight History separately or in one versioned XLSX workbook. Imports validate before writing, merge without deleting records, skip identical identities and preserve conflicting existing records. Normalized child sheets preserve multiple same-day sessions and historical food snapshots; canonical units remain metric. Full JSON backup/restore remains the safest complete restoration format.
 
 ### Units, Appearance and Language
 
@@ -92,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.5**
-- Android Build: **24**
+- Current Version: **v1.0.6**
+- Android Build: **25**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
