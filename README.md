@@ -12,13 +12,13 @@ LifeTracker is an Android app for recording workouts, food intake and bodyweight
 
 ## Download
 
-**Latest version: v1.0.2 (build 21)**
+**Latest version: v1.0.3 (build 22)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.2-build21.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.2/LifeTracker-v1.0.2-build21.apk)
+Current APK: [LifeTracker-v1.0.3-build22.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.3/LifeTracker-v1.0.3-build22.apk)
 
-Play Store bundle: [LifeTracker-v1.0.2-build21.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.2/LifeTracker-v1.0.2-build21.aab)
+Play Store bundle: [LifeTracker-v1.0.3-build22.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.3/LifeTracker-v1.0.3-build22.aab)
 
 ### Install or update
 
@@ -48,6 +48,8 @@ Track consumed amounts and actual calories, protein, carbohydrates and fat. Use 
 
 Plan meals and food portions with Daily, Weekly or N-week recurrence and optional nutrition targets. Each planned food occurrence can be enabled/disabled without losing its values, edited while disabled, re-enabled or permanently deleted separately. Disabled foods do not contribute to planned nutrition. Duplicate occurrences are independently controlled; prior consumed food logs remain intact.
 
+Programs, Libraries and Data Tools each have their own Menu destination. Program details include an explicit Active/Inactive control, start date, recurrence, end behavior and confirmed deletion. Fresh installations have one Example Workout Program and one Example Diet Program. Shared numeric/text inputs reveal the focused field above the keyboard.
+
 ### Exercise and Food Libraries
 
 Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
@@ -62,7 +64,7 @@ Workout burn combines completed resistance work, recorded cardio and Other Activ
 
 ### Calendar, History and Exercise Progress
 
-Review dated workout/Diet records, completion and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
+Calendar shows separate Workout and Diet states for each date. Optional goal completion uses stored planned-food totals and scheduled work, configurable Diet tolerance and Green/Orange thresholds. Choose percentages or status colors. Review dated records and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
 
 ### Daily Summary
 
@@ -82,8 +84,8 @@ Core tracking works locally/offline using SQLite. Versioned migrations preserve 
 
 ## Version Information
 
-- Current Version: **v1.0.2**
-- Android Build: **21**
+- Current Version: **v1.0.3**
+- Android Build: **22**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
