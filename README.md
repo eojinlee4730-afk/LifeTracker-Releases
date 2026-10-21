@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.6 (build 25)**
+**Latest version: v1.0.7 (build 26)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.6-build25.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.6/LifeTracker-v1.0.6-build25.apk)
+Current APK: [LifeTracker-v1.0.7-build26.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.7/LifeTracker-v1.0.7-build26.apk)
 
-Play Store bundle: [LifeTracker-v1.0.6-build25.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.6/LifeTracker-v1.0.6-build25.aab)
+Play Store bundle: [LifeTracker-v1.0.7-build26.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.7/LifeTracker-v1.0.7-build26.aab)
 
 ### Install or update
 
@@ -34,7 +34,7 @@ Play Store bundle: [LifeTracker-v1.0.6-build25.aab](https://github.com/eojinlee4
 
 Web records stay in browser-local IndexedDB. There is no account, automatic Android/Web sync or server backup. Transfer data manually with JSON backups in Menu → Data Management → Backup & Restore. Clearing site data or private browsing can remove records; export backups regularly. Browser rest alerts are less capable than Android native alarms and depend on browser permissions/background policies.
 
-- Live English/Korean language changes now refresh navigation labels and screen content without resetting navigation; the selected language persists after its queued save completes.
+- Live English/Korean language changes now refresh navigation labels, screen-reader actions and screen content without resetting navigation; the selected language persists after its queued save completes.
 
 ## Features
 
@@ -98,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.6**
-- Android Build: **25**
+- Current Version: **v1.0.7**
+- Android Build: **26**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
