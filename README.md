@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.8 (build 27)**
+**Latest version: v1.0.9 (build 28)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.8-build27.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.8/LifeTracker-v1.0.8-build27.apk)
+Current APK: [LifeTracker-v1.0.9-build28.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.9/LifeTracker-v1.0.9-build28.apk)
 
-Play Store bundle: [LifeTracker-v1.0.8-build27.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.8/LifeTracker-v1.0.8-build27.aab)
+Play Store bundle: [LifeTracker-v1.0.9-build28.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.9/LifeTracker-v1.0.9-build28.aab)
 
 ### Install or update
 
@@ -40,7 +40,7 @@ Web records stay in browser-local IndexedDB. There is no account, automatic Andr
 
 ### Workout Tracking and Timer
 
-Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
+Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Vector boxed checks distinguish incomplete, partial and completed work without relying on color alone. Exercise and Workout status derive from participating children: all incomplete is gray, all complete is green, and mixed states are orange. Session indicators remain independent. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
 
 Start, pause, resume and finish the tracked workout for a date. Elapsed time uses timestamps and excludes pauses. Finish is prominent at both top and bottom. A confirmed **Reset Today's Workout** clears that day's actual workout state while retaining the planned workout, Diet and other dates.
 
@@ -98,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.8**
-- Android Build: **27**
+- Current Version: **v1.0.9**
+- Android Build: **28**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
