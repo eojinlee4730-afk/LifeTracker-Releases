@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.11 (build 30)**
+**Latest version: v1.0.12 (build 31)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.11-build30.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.11/LifeTracker-v1.0.11-build30.apk)
+Current APK: [LifeTracker-v1.0.12-build31.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.12/LifeTracker-v1.0.12-build31.apk)
 
-Play Store bundle: [LifeTracker-v1.0.11-build30.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.11/LifeTracker-v1.0.11-build30.aab)
+Play Store bundle: [LifeTracker-v1.0.12-build31.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.12/LifeTracker-v1.0.12-build31.aab)
 
 ### Install or update
 
@@ -92,14 +92,18 @@ Data Management exports/imports actual Workout, Diet and Bodyweight History sepa
 
 Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English and Korean have complete dictionary coverage; chart titles, filters, legends/tooltips, library filters and meal labels use the selected language at render time; sparse additional locales use consistent English UI fallback with locale-aware dates/numbers. A system-language preference is available. **Dark appearance is the supported theme in this build.**
 
+### Dialogs and Action Feedback
+
+Confirmation dialogs share LifeTracker's dark surface, readable typography and equal-height actions, with Cancel before the primary/destructive choice. Program activation shows immediate localized progress, blocks duplicate submissions and refreshes active/inactive state after its atomic database transaction. Import, export, template generation, restore and editor saves show consistent busy feedback; critical committing dialogs cannot be dismissed with Back.
+
 ### Data, Offline Storage and Android Integration
 
 Core tracking works locally/offline using SQLite on Android and SQLite/WASM stored in IndexedDB on Web. Versioned migrations preserve records; analytics caches are disposable and rebuilt as needed. JSON backup/restore and file sharing support local data management. Android integration includes native rest alarms/notifications, generated PNG file saving and file sharing. This distribution repository contains documentation and signed release artifacts, not the private application source.
 
 ## Version Information
 
-- Current Version: **v1.0.11**
-- Android Build: **30**
+- Current Version: **v1.0.12**
+- Android Build: **31**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
