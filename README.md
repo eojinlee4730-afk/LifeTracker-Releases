@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.9 (build 28)**
+**Latest version: v1.0.10 (build 29)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.9-build28.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.9/LifeTracker-v1.0.9-build28.apk)
+Current APK: [LifeTracker-v1.0.10-build29.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.10/LifeTracker-v1.0.10-build29.apk)
 
-Play Store bundle: [LifeTracker-v1.0.9-build28.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.9/LifeTracker-v1.0.9-build28.aab)
+Play Store bundle: [LifeTracker-v1.0.10-build29.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.10/LifeTracker-v1.0.10-build29.aab)
 
 ### Install or update
 
@@ -82,7 +82,7 @@ Preview daily Workout/Diet summaries, save generated PNGs to a system-selected f
 
 Menu → Data Management separates Program Import / Export, Templates, actual History files and Backup & Restore. Programs & Plans also links to that shared area and has bottom Save Template / Import Data buttons. Templates opens a two-choice modal in place; both entry points use the same generator. Import shortcuts use the guarded Program preview, separate from History. Workout File and Diet File have parallel Import File / Save Template actions, and each expandable Program row exports only when requested. Program detail has the same export action at the bottom. Start Date appears directly above Recurrence in a compact metadata group. Supported exercise/food/activity deletes and planned-content edits update immediately while persistence stays serialized; failures reconcile without raw database text.
 
-New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. EXAMPLE rows are excluded; a sample-only workbook creates no Program. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Shared Workout/Diet presets remain available.
+New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. EXAMPLE rows are excluded; a sample-only workbook creates no Program. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Instructions use ordinary cells and RowNote rather than native Excel comments. Imported comment/VML annotations are ignored without changing cell values, validation rules or example-row markers. Shared Workout/Diet presets remain available.
 
 Started/performed workout occurrences keep their materialized exercise, set and session snapshots when the active Program is edited or switched, including on today's date. Untouched future occurrences can follow updated plans. Workout/Diet Programs remain independent.
 
@@ -98,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.9**
-- Android Build: **28**
+- Current Version: **v1.0.10**
+- Android Build: **29**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
