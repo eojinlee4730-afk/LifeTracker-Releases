@@ -12,13 +12,13 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 ## Download
 
-**Latest version: v1.0.10 (build 29)**
+**Latest version: v1.0.11 (build 30)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.10-build29.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.10/LifeTracker-v1.0.10-build29.apk)
+Current APK: [LifeTracker-v1.0.11-build30.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.11/LifeTracker-v1.0.11-build30.apk)
 
-Play Store bundle: [LifeTracker-v1.0.10-build29.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.10/LifeTracker-v1.0.10-build29.aab)
+Play Store bundle: [LifeTracker-v1.0.11-build30.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.11/LifeTracker-v1.0.11-build30.aab)
 
 ### Install or update
 
@@ -40,7 +40,7 @@ Web records stay in browser-local IndexedDB. There is no account, automatic Andr
 
 ### Workout Tracking and Timer
 
-Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Vector boxed checks distinguish incomplete, partial and completed work without relying on color alone. Exercise and Workout status derive from participating children: all incomplete is gray, all complete is green, and mixed states are orange. Session indicators remain independent. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
+Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Muted, dark-surface vector boxed checks distinguish incomplete, partial and completed work without relying on color alone. Exercise and Workout status derive from participating children: all incomplete is gray, all complete is green, and mixed states are orange. Session indicators remain independent. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
 
 Start, pause, resume and finish the tracked workout for a date. Elapsed time uses timestamps and excludes pauses. Finish is prominent at both top and bottom. A confirmed **Reset Today's Workout** clears that day's actual workout state while retaining the planned workout, Diet and other dates.
 
@@ -82,7 +82,7 @@ Preview daily Workout/Diet summaries, save generated PNGs to a system-selected f
 
 Menu → Data Management separates Program Import / Export, Templates, actual History files and Backup & Restore. Programs & Plans also links to that shared area and has bottom Save Template / Import Data buttons. Templates opens a two-choice modal in place; both entry points use the same generator. Import shortcuts use the guarded Program preview, separate from History. Workout File and Diet File have parallel Import File / Save Template actions, and each expandable Program row exports only when requested. Program detail has the same export action at the bottom. Start Date appears directly above Recurrence in a compact metadata group. Supported exercise/food/activity deletes and planned-content edits update immediately while persistence stays serialized; failures reconcile without raw database text.
 
-New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. EXAMPLE rows are excluded; a sample-only workbook creates no Program. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Instructions use ordinary cells and RowNote rather than native Excel comments. Imported comment/VML annotations are ignored without changing cell values, validation rules or example-row markers. Shared Workout/Diet presets remain available.
+New schema-v4 Workout/Diet workbooks use English or Korean visible headers, dropdowns, instructions and example labels based on app language; hidden stable keys keep either language importable in either UI. Typed numeric fields, one-weekday-per-row rules, recurrence requirements and library identities are validated before saving. Every EXAMPLE row is excluded; two-row sample blocks demonstrate separate foods/sets and a sample-only workbook creates no Program. Both templates include strict AI/human one-item-per-row instructions. Obvious combined names or prose require correction and are never automatically split. Workbook planning metadata preserves rich prescriptions and nutrition snapshots; it contains no actual session history. Legacy canonical Workout/Diet sheets remain supported. Exported Program files and templates use the same generator. Instructions use ordinary cells and RowNote rather than native Excel comments. Imported comment/VML annotations are ignored without changing cell values, validation rules or example-row markers. Exact and uniquely normalized catalog names/aliases resolve automatically. Similar/ambiguous names require explicit mapping; repeated values share a selection. Diet mapping can search the Food Library or explicitly create a reviewed Food without restarting. Unknown names never create Library entries automatically. Custom catalog names are allowed through mapping, while structural enums retain strict dropdowns. Shared Workout/Diet presets remain available.
 
 Started/performed workout occurrences keep their materialized exercise, set and session snapshots when the active Program is edited or switched, including on today's date. Untouched future occurrences can follow updated plans. Workout/Diet Programs remain independent.
 
@@ -90,7 +90,7 @@ Data Management exports/imports actual Workout, Diet and Bodyweight History sepa
 
 ### Units, Appearance and Language
 
-Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English and Korean have complete dictionary coverage; sparse additional locales use consistent English UI fallback with locale-aware dates/numbers. A system-language preference is available. **Dark appearance is the supported theme in this build.**
+Choose Metric or Imperial display without rewriting canonical measurements. Imperial weight/distance displays use consistent decimal formatting. English and Korean have complete dictionary coverage; chart titles, filters, legends/tooltips, library filters and meal labels use the selected language at render time; sparse additional locales use consistent English UI fallback with locale-aware dates/numbers. A system-language preference is available. **Dark appearance is the supported theme in this build.**
 
 ### Data, Offline Storage and Android Integration
 
@@ -98,8 +98,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.10**
-- Android Build: **29**
+- Current Version: **v1.0.11**
+- Android Build: **30**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
