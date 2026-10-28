@@ -8,17 +8,17 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 - Food intake, calories/macros and independent Workout/Diet Programs.
 - Calendar, History, exercise progress and daily summary images.
 - Session-aware XLSX Programs, reusable presets, duplicate-safe actual History XLSX merge and full JSON backups.
-- Local SQLite storage, English/Korean and Metric/Imperial display.
+- Local SQLite storage, configurable Today body/recovery metrics, English/Korean and Metric/Imperial display.
 
 ## Download
 
-**Latest version: v1.0.12 (build 31)**
+**Latest version: v1.0.13 (build 32)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.12-build31.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.12/LifeTracker-v1.0.12-build31.apk)
+Current APK: [LifeTracker-v1.0.13-build32.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.13/LifeTracker-v1.0.13-build32.apk)
 
-Play Store bundle: [LifeTracker-v1.0.12-build31.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.12/LifeTracker-v1.0.12-build31.aab)
+Play Store bundle: [LifeTracker-v1.0.13-build32.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.13/LifeTracker-v1.0.13-build32.aab)
 
 ### Install or update
 
@@ -42,7 +42,21 @@ Web records stay in browser-local IndexedDB. There is no account, automatic Andr
 
 Record actual weights, reps, RPE and completed/skipped sets, add extra sets or exercises, and keep exercise notes. Muted, dark-surface vector boxed checks distinguish incomplete, partial and completed work without relying on color alone. Exercise and Workout status derive from participating children: all incomplete is gray, all complete is green, and mixed states are orange. Session indicators remain independent. Supported exercise tracking modes include resistance, bodyweight and cardio metrics. Completing an item before starting offers a confirmation that starts the workout and performs that exact action.
 
-Start, pause, resume and finish the tracked workout for a date. Elapsed time uses timestamps and excludes pauses. Finish is prominent at both top and bottom. A confirmed **Reset Today's Workout** clears that day's actual workout state while retaining the planned workout, Diet and other dates.
+Start, pause, resume and finish the tracked workout for a date. Elapsed time uses timestamps and excludes pauses. Finish is prominent at both top and bottom. Numeric fields keep a stable input and local draft during focus changes; blur/Done/navigation commits are deduplicated. All-mode editing highlights and mirrors the current set and every set below it in the same exercise and field, including existing/completed values. The scope toolbar remains available while editing. Finishing first saves the actual session, then offers to patch changed weight/reps and explicitly reusable Program notes into the exact originating occurrence. Actual exertion RPE, diary comments, extra exercises and session timing stay History-only; newer conflicting Program values are preserved. A confirmed **Reset Today's Workout** clears that day's actual workout state while retaining the planned workout, Diet and other dates.
+
+### Optional Automatic Progressive Overload
+
+Enable this explicitly before activating a Workout Program, or change it later from Program details. The default uses the highest actual RPE among completed prescribed working sets: RPE ≤8 increases load, 8.5–9 holds, and high RPE, missed work or missing RPE hold. Advanced Settings provide thresholds, failure/high-RPE reductions, increments, available equipment steps, per-exercise overrides, minimum sets, prescribed-rep checks, aggregation and an optional increase cap. Defaults use a conservative editable 2.5 kg increment; equipment steps must be configured when needed.
+
+Decisions apply to one exact next Daily/Weekly/N-week occurrence using Program, week, day, session and exercise identities. Duplicate exercises can use explicit chain keys. Finished actuals remain immutable. Each source has a durable decision; newer Program edits or edited/started future occurrences are preserved with a compact warning. Untouched future snapshots follow the revised prescription. Disabling stops future decisions without undoing prior changes. JSON backups preserve settings and decision provenance; XLSX retains the existing prescription exchange format.
+
+Today Diet displays each date’s macro target directly beneath its actual intake. Stored date targets and explicit overrides take priority; unspecified goals may use the same date’s planned food snapshot. Unknown targets show a dash.
+
+### Today Body and Recovery Metrics
+
+Settings → Today Tracking Fields controls the order and visibility of 18 compact daily measurements: bodyweight, body fat, skeletal muscle/muscle mass, five circumferences, sleep duration/quality, resting heart rate, steps, water, energy, stress, soreness and hunger. Bodyweight remains enabled by default; other measurements are optional. Hiding a field preserves its records. Weight uses the existing table; other measurements use an additive daily table with canonical kg/cm/minutes/mL values and indexed date/metric access. Full JSON backups include these measurements; existing Workout/Diet/Bodyweight History spreadsheet schemas remain unchanged.
+
+Linked Exercises explicitly connect adjacent occurrences within one session. A linked group moves as a block; completing a set rotates to the next member with remaining work after required RPE is entered. Today links stay local to that actual session. Program links materialize into future Today occurrences and can be roundtripped through optional LinkGroup/LinkPosition spreadsheet fields.
 
 ### Workout Programs
 
@@ -60,7 +74,7 @@ Programs & Plans, Libraries and Data Management each have their own Menu destina
 
 ### Exercise and Food Libraries
 
-Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Custom Exercise has six draft-based multi-select metadata sheets and a nonnegative kcal/hour metadata field; existing aliases remain searchable without an alias-editing field. The rate does not replace the current completed-work/MET calorie engine. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
+Browse/search built-in exercises and foods, manage custom entries and favorites, and use library entries in plans and actual logs. Custom Exercise has six draft-based multi-select metadata sheets and a nonnegative kcal/hour metadata field; existing aliases remain searchable without an alias-editing field. The rate does not replace the current completed-work/MET calorie engine. Custom creation and current-session replacement patch only the affected occurrence and preserve session/set identities, timers and unrelated edits. The Dumbbell Rear Delt Fly name is corrected while retaining its stable library identity; the genuine Shoulder Press remains separate. Stored identities keep separate occurrences distinct. Missing nutrition values remain distinguishable from recorded zero.
 
 ### Rest Timer
 
@@ -102,8 +116,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.12**
-- Android Build: **31**
+- Current Version: **v1.0.13**
+- Android Build: **32**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
