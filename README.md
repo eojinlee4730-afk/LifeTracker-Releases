@@ -6,19 +6,21 @@ LifeTracker is an Android app and a free local-only Web/PWA for recording workou
 
 - Independently timed workout sessions, resistance sets, cardio and one shared rest countdown.
 - Food intake, calories/macros and independent Workout/Diet Programs.
-- Calendar, History, exercise progress and daily summary images.
+- Calendar, Records, exercise progress and daily summary images.
 - Session-aware XLSX Programs, reusable presets, duplicate-safe actual History XLSX merge and full JSON backups.
 - Local SQLite storage, configurable Today body/recovery metrics, English/Korean and Metric/Imperial display.
 
+Each Today Food has an independent Edit action for its actual quantity and portion/g unit. Nutrition scales from that occurrence’s frozen reference. Cross-unit conversion requires an explicit serving weight. Reusable Food Library definitions and other historical occurrences remain separate. New Programs open from a minimal inactive root without activation or broad analytics work.
+
 ## Download
 
-**Latest version: v1.0.14 (build 33)**
+**Latest version: v1.0.15 (build 34)**
 
 [**Open the latest release and download the APK**](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/latest)
 
-Current APK: [LifeTracker-v1.0.14-build33.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.14/LifeTracker-v1.0.14-build33.apk)
+Current APK: [LifeTracker-v1.0.15-build34.apk](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.15/LifeTracker-v1.0.15-build34.apk)
 
-Play Store bundle: [LifeTracker-v1.0.14-build33.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.14/LifeTracker-v1.0.14-build33.aab)
+Play Store bundle: [LifeTracker-v1.0.15-build34.aab](https://github.com/eojinlee4730-afk/LifeTracker-Releases/releases/download/v1.0.15/LifeTracker-v1.0.15-build34.aab)
 
 ### Install or update
 
@@ -86,9 +88,15 @@ One global ON/OFF setting applies to all exercises, with independent saved durat
 
 Workout burn combines completed resistance work, recorded cardio and Other Activity once. Resistance uses a bounded completed-set work/time estimate and bodyweight/intensity inputs; idle session time alone contributes zero resistance calories. Other Activity accepts optional explicit kcal that overrides its estimate. Missing required inputs can leave estimates unavailable. Semantic readouts round kcal to whole numbers, macros/RPE/MET/speed to at most one decimal, and distance to two; stored values and active drafts retain their precision. Walking/running estimates use speed and grade within supported ACSM workload ranges; cycling uses speed bands unless MET is explicitly overridden. Inputs outside the supported speed/grade range show an unavailable estimate with an explanation. Activity duration uses separate minute/second inputs. Below memo, Calculation selects Auto (the last two explicitly edited distance/time/speed values determine the third) or Manual (all three remain independent). Current activities save that interpretation; completed/imported History retains its snapshots. Activity presets retain duration, motion values, calculation mode and explicitly authored memo/intensity settings when added to Today; viewing untouched prescribed values alone does not create recorded History. Calories use an explicit date weight or the latest applicable weight at/before the date, without inventing a weight record. These are estimates, not measured physiological expenditure.
 
-### Calendar, History and Exercise Progress
+### Calendar, Records and Exercise Progress
 
-Calendar shows separate Workout and Diet states for each date. Optional goal completion uses stored planned-food totals and scheduled work, independent Workout and Diet ranges (default Orange 50–150%, Green 90–110%). Both use red/orange/green/orange/red bands with validated lower and upper bounds; planned Workout completion remains capped at 100%. Paired range inputs use compact Start/End labels and retain full Workout/Diet and color-specific accessible names. Choose percentages or status colors. Opening, expanding or focusing an unchanged dated plan creates no actual workout, food, bodyweight or health record. A meaningful edit/start/check creates actual data lazily. Review dated records and bodyweight. History and Summary use cached aggregates and selected date ranges; charts load locally and respect reduced motion. Exercise Progress provides identity-specific charts and bounded session details for actual work. Diet adherence and nutrition/bodyweight trends help compare records with plans.
+Calendar shows separate Workout and Diet states for each date. Optional achievement criteria have independent Workout and Diet ranges. Fresh settings use Orange 50–150% and Green 80–120%, while valid saved custom ranges and legacy thresholds retain their values. Both domains use red/orange/green/orange/red bands with validated lower and upper bounds. Planned Workout completion remains capped at 100%. Diet percentage uses the date's calorie target when available, with a macro-only fallback. The displayed percentage and color share the same classifier. Settings changes reclassify cached numeric facts immediately.
+
+Actual Exercise Memos stay with their performed occurrence and session. History and Exercise Progress read that same saved memo, with separate entries for repeated same-day sessions. Finish captures the active text draft and waits for persistence. Actual Memos remain separate from reusable Program notes and roundtrip through History XLSX.
+
+Records contains All Records, Daily Records, Exercise Progress and Adherence in that order. All Records keeps bodyweight, nutrition and workout charts together. A shared top filter selects 7, 30, 90 days or exact custom dates and follows navigation across Records pages. Statistics, charts, lists and Adherence use that period. Unavailable averages and ratios remain distinct from recorded zero. Child routes retain their Records parent on Back. Adherence uses localized labels and is no longer a Menu destination. Menu lists Presets before Data Management.
+
+Activating a Diet Program updates today's targets and replaceable planned Foods while preserving consumed occurrence identities, actual nutrition and frozen reference snapshots. Today, Calendar, Records and Adherence read the same dated target. Past and imported historical snapshots retain their targets. Opening, expanding or focusing an unchanged dated plan creates no actual workout, food, bodyweight or health record. Meaningful edits/start/check actions create actual data lazily. Cached aggregates and bounded selected-range queries support Records and Exercise Progress; charts load locally and respect reduced motion.
 
 ### Daily Summary
 
@@ -120,8 +128,8 @@ Core tracking works locally/offline using SQLite on Android and SQLite/WASM stor
 
 ## Version Information
 
-- Current Version: **v1.0.14**
-- Android Build: **33**
+- Current Version: **v1.0.15**
+- Android Build: **34**
 - Package: `com.lee2300.LifeTracker`
 
 ## Known Limitations
